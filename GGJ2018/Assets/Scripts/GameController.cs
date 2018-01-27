@@ -12,6 +12,14 @@ public class GameController : MonoBehaviour {
 
     public IntObject Score;
 
+    public TalkObject Talk;
+
+    public GameObject FullScreen;
+
+	public Sprite StartImage;
+    public Sprite LossImage;
+    public Sprite WinImage;
+
 	[SerializeField]
 	TextAsset BadWordsAsset = null;
 
@@ -29,6 +37,7 @@ public class GameController : MonoBehaviour {
 
 	void Awake()
 	{
+		FullScreen.GetComponentInChildren<Image>().sprite = StartImage;
 		LoadData();
         SetMeter();
 		InitGame();
@@ -46,7 +55,8 @@ public class GameController : MonoBehaviour {
 
     void InitGame()
     {
-        Score.Value = 0;
+        Score.Reset();
+        Talk.Reset();
     }
 
     void LoadData()
@@ -70,7 +80,11 @@ public class GameController : MonoBehaviour {
     {
         // get player input as a string
         string input = TextInputField.text;
+        if (input.Equals("")) return;
 		Debug.Log("on submit: " + input);
+
+		// update conversation
+		Talk.CreateTalk(input, TalkObject.Side.Left);
 
         // clear player input field
         TextInputField.text = "";
@@ -112,6 +126,11 @@ public class GameController : MonoBehaviour {
 		// update score
 		int scoreDiff = numBadWords * ADD_BAD + numGoodWords * ADD_GOOD;
         Score.Value = Score.Value + scoreDiff;
+
+        // activate input
+        TextInputField.ActivateInputField();
+
+        CheckScore();
     }
 
     void CheckInput()
@@ -120,5 +139,33 @@ public class GameController : MonoBehaviour {
         {
             OnSubmit();
         }
+    }
+
+    void CheckScore()
+    {
+        if (Score.Value <= MIN || Score.Value >= MAX)
+        {
+            EndGame();
+        }
+    }
+
+    void EndGame()
+    {
+        Debug.Log("Game End");
+        if (Score.Value <= MIN)
+        {
+            FullScreen.GetComponentInChildren<Image>().sprite = LossImage;
+        }
+        else
+        {
+            FullScreen.GetComponentInChildren<Image>().sprite = WinImage;
+        }
+        FullScreen.SetActive(true);
+    }
+
+    public void StartGame()
+    {
+		InitGame();
+		FullScreen.SetActive(false);
     }
 }

@@ -7,8 +7,7 @@ To Do
 - redesign ui (Rony, River)
 - background images (Rony)
 - character images (Rony)
-- use global event to trigger responses
-- add end condition - reaches max/min
+- bubble image (Rony)
 
 Done:
 - setup Git
@@ -25,3 +24,10 @@ Done:
 - clear player input field after submitted
 - search for multiple instances in a sentence
 - use global event to update score ui/meter
+- use global event to trigger responses
+- add five conditions - neutral, good, very good, bad, very bad
+- add responses - list of random sentences
+- conversation panel - like whatsapp
+- check if input is empty
+- put cursor back to conversation
+- add end condition - reaches max/min

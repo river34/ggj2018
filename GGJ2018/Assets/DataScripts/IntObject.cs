@@ -34,4 +34,9 @@ public class IntObject : ScriptableObject
             return value;
         }
     }
+
+    public void Reset()
+    {
+        value = 0;
+    }
 }
