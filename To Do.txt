@@ -1,11 +1,12 @@
 #GGJ2018
 
-To Do
+To Do:
 - expand the list of bad words (Rony)
 - expand the list of good words (Rony)
 - bubble image, reversed bubble image (Rony)
 - start, win, loss image (Rony)
 - background music (Rony)
+- find font (Rony)
 
 Done:
 - setup Git
@@ -34,3 +35,6 @@ Done:
 - background images
 - expand the list of bad responses (Rony)
 - expand the list of good responses (Rony)
+- change meter ui
+- import character images
+- reset

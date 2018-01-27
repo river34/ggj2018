@@ -19,6 +19,7 @@ public class Meter : MonoBehaviour {
     private void Start()
     {
         Score.OnChanged += UpdateScore;
+        Score.OnResetted += Reset;
     }
 
     public void SetRate(int min, int max)
@@ -33,5 +34,10 @@ public class Meter : MonoBehaviour {
 		{
             NeedleRect.anchoredPosition = new Vector2(NeedleRect.anchoredPosition.x, moveDist);
         }
+    }
+
+    public void Reset()
+    {
+        NeedleRect.anchoredPosition = new Vector2(NeedleRect.anchoredPosition.x, 0);
     }
 }

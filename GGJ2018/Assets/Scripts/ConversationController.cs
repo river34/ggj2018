@@ -31,7 +31,7 @@ public class ConversationController : MonoBehaviour {
     private void Start()
     {
         Talk.OnChanged += AddTalk;
-        Talk.OnResetted += ResetPosition;
+        Talk.OnResetted += Reset;
     }
 
     void AddTalk()
@@ -53,7 +53,7 @@ public class ConversationController : MonoBehaviour {
 
 		RectTransform goRect = go.GetComponent<RectTransform>();
 		goRect.anchoredPosition = new Vector2(goRect.anchoredPosition.x, positionY);
-		positionY -= MoveDist;
+		positionY += MoveDist;
 
         // update conversation panel position
         // rect.anchoredPosition += new Vector2(0, MoveDist);
@@ -67,16 +67,21 @@ public class ConversationController : MonoBehaviour {
     IEnumerator Move(float dist)
     {
         float currDist = 0;
-        while (currDist < dist)
+        while (currDist > -dist)
         {
-            currDist += Time.deltaTime * MoveSpeed;
-            rect.anchoredPosition += new Vector2(0, Time.deltaTime * MoveSpeed);
+            currDist -= Time.deltaTime * MoveSpeed;
+            rect.anchoredPosition -= new Vector2(0, Time.deltaTime * MoveSpeed);
             yield return new WaitForEndOfFrame();
         }
     }
 
-    void ResetPosition()
+    void Reset()
     {
+        positionY = 0;
         rect.anchoredPosition = position;
+		foreach (Transform child in transform)
+		{
+            Destroy(child.gameObject);
+		}
     }
 }

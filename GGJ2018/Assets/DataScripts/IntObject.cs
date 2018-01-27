@@ -10,6 +10,7 @@ public class IntObject : ScriptableObject
     int lastValue;
     public event Action OnChanged;
     public event Action OnSubmitted;
+    public event Action OnResetted;
 
     public int Value
     {
@@ -38,5 +39,9 @@ public class IntObject : ScriptableObject
     public void Reset()
     {
         value = 0;
+        if (OnResetted != null)
+        {
+            OnResetted();
+        }
     }
 }

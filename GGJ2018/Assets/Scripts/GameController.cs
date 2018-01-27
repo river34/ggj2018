@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour {
     public Sprite LossImage;
     public Sprite WinImage;
 
+    public AudioSource Audio;
+
 	[SerializeField]
 	TextAsset BadWordsAsset = null;
 
@@ -41,13 +43,7 @@ public class GameController : MonoBehaviour {
         FullScreen.SetActive(true);
 		LoadData();
         SetMeter();
-		InitGame();
 	}
-
-    private void OnApplicationQuit()
-    {
-        InitGame();
-    }
 
     void Update()
 	{
@@ -167,6 +163,7 @@ public class GameController : MonoBehaviour {
     public void StartGame()
     {
 		InitGame();
+        Audio.Play();
 		FullScreen.SetActive(false);
     }
 }
