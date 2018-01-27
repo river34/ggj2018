@@ -31,7 +31,6 @@ public class Meter : MonoBehaviour {
         float moveDist = Score.Value * rate;
         if (moveDist >= Min && moveDist <= Max)
 		{
-			Debug.Log("upade meter: " + moveDist);
             NeedleRect.anchoredPosition = new Vector2(NeedleRect.anchoredPosition.x, moveDist);
         }
     }

@@ -27,14 +27,19 @@ public class GameController : MonoBehaviour {
     const int MAX = 100;
     const int MIN = -100;
 
-	void Start()
+	void Awake()
 	{
 		LoadData();
         SetMeter();
 		InitGame();
 	}
 
-	void Update()
+    private void OnApplicationQuit()
+    {
+        InitGame();
+    }
+
+    void Update()
 	{
 		CheckInput();
 	}
@@ -104,9 +109,9 @@ public class GameController : MonoBehaviour {
 		}
         Debug.Log("good words # = " + numGoodWords);
 
-        // update score
-        int scoreDiff = numBadWords * ADD_BAD + numGoodWords * ADD_GOOD;
-        Score.Value += scoreDiff;
+		// update score
+		int scoreDiff = numBadWords * ADD_BAD + numGoodWords * ADD_GOOD;
+        Score.Value = Score.Value + scoreDiff;
     }
 
     void CheckInput()

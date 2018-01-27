@@ -11,7 +11,7 @@ public class Character : MonoBehaviour {
 
     private void Start()
     {
-        Score.OnChanged += UpdateResponse;
+        Score.OnSubmitted += UpdateResponse;
     }
 
     void UpdateResponse()
