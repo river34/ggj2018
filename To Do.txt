@@ -7,7 +7,10 @@ To Do
 - redesign ui (Rony, River)
 - background images (Rony)
 - character images (Rony)
-- bubble image (Rony)
+- bubble image, reversed bubble image (Rony)
+- start, win, loss image (Rony)
+- expand the list of bad responses (Rony)
+- expand the list of good responses (Rony)
 
 Done:
 - setup Git
