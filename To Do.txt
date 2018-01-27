@@ -1,10 +1,8 @@
 #GGJ2018
 
 To Do
-- timer for Player input?
 - expand the list of bad words (Rony)
 - expand the list of good words (Rony)
-- redesign ui (Rony, River)
 - background images (Rony)
 - character images (Rony)
 - bubble image, reversed bubble image (Rony)
@@ -34,3 +32,4 @@ Done:
 - check if input is empty
 - put cursor back to conversation
 - add end condition - reaches max/min
+- redesign ui (Rony, River)

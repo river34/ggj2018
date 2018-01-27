@@ -175,7 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '* The Dating Game *'
+  m_Text: '* Serious Talk Dude *'
 --- !u!222 &228676548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1522,7 +1522,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Dating
+  m_Text: Start Talking
 --- !u!222 &1282802780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2044,6 +2044,9 @@ MonoBehaviour:
   Score: {fileID: 11400000, guid: 0af4f54b94c694e64a936b8ba8177f83, type: 2}
   Talk: {fileID: 11400000, guid: 45c08fcb4509540de875a6a7c166d90f, type: 2}
   FullScreen: {fileID: 700595471}
+  StartImage: {fileID: 0}
+  LossImage: {fileID: 0}
+  WinImage: {fileID: 0}
   BadWordsAsset: {fileID: 4900000, guid: eac0dddee31794f4f900fcb4590125ef, type: 3}
   GoodWordsAsset: {fileID: 4900000, guid: 80d8a0c93c566450196192a67fa3e677, type: 3}
 --- !u!4 &2065071417
