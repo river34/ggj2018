@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour {
 	void Awake()
 	{
 		FullScreen.GetComponentInChildren<Image>().sprite = StartImage;
+        FullScreen.SetActive(true);
 		LoadData();
         SetMeter();
 		InitGame();

@@ -3,12 +3,9 @@
 To Do
 - expand the list of bad words (Rony)
 - expand the list of good words (Rony)
-- background images (Rony)
-- character images (Rony)
 - bubble image, reversed bubble image (Rony)
 - start, win, loss image (Rony)
-- expand the list of bad responses (Rony)
-- expand the list of good responses (Rony)
+- background music (Rony)
 
 Done:
 - setup Git
@@ -33,3 +30,7 @@ Done:
 - put cursor back to conversation
 - add end condition - reaches max/min
 - redesign ui (Rony, River)
+- character images (Rony)
+- background images
+- expand the list of bad responses (Rony)
+- expand the list of good responses (Rony)
