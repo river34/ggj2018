@@ -1,0 +1,27 @@
+#GGJ2018
+
+To Do
+- timer for Player input?
+- expand the list of bad words (Rony)
+- expand the list of good words (Rony)
+- redesign ui (Rony, River)
+- background images (Rony)
+- character images (Rony)
+- use global event to trigger responses
+- add end condition - reaches max/min
+
+Done:
+- setup Git
+- setup Unity project
+- setup UI layout
+- list of bad words
+- list of good words
+- load lists of words
+- handle Player input
+- process Player input
+- "enter" key for quick submit
+- update score
+- update meter for good/bad feeling
+- clear player input field after submitted
+- search for multiple instances in a sentence
+- use global event to update score ui/meter
