@@ -3,10 +3,7 @@
 To Do:
 - expand the list of bad words (Rony)
 - expand the list of good words (Rony)
-- bubble image, reversed bubble image (Rony)
 - start, win, loss image (Rony)
-- background music (Rony)
-- find font (Rony)
 
 Done:
 - setup Git
@@ -38,3 +35,6 @@ Done:
 - change meter ui
 - import character images
 - reset
+- background music (Rony)
+- find font (Rony)
+- bubble image, reversed bubble image (Rony)
