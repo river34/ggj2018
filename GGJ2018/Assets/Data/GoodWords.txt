@@ -1,7 +1,6 @@
 perfect
 genius
 exceptional
-essential
 recommend
 accomplishment
 outstanding
@@ -15,7 +14,6 @@ choice
 superb
 splendid
 impeccable
-peak
 exclusive
 expert
 fantastic
@@ -32,10 +30,8 @@ impressive
 interesting
 memorable
 exciting
-fully
 positive
 positively
-good
 great
 smart
 intelligent
@@ -52,3 +48,6 @@ insight
 thoughts
 idea
 ideas
+concepts
+brain
+smarts
