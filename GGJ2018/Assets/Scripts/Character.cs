@@ -22,9 +22,14 @@ public class Character : MonoBehaviour {
 	[SerializeField]
 	TextAsset BadResponsesAsset = null;
 
+	[SerializeField]
+	TextAsset NeutralResponsesAsset = null;
+
 	List<string> badResponses = null;
 
 	List<string> goodResponses = null;
+
+    List<string> neutralResponses = null;
 
     int lastScore;
 
@@ -42,10 +47,12 @@ public class Character : MonoBehaviour {
 	{
 		TextAssetLoader.GetWords(ref BadResponsesAsset, ref badResponses);
 		TextAssetLoader.GetWords(ref GoodResponsesAsset, ref goodResponses);
+        TextAssetLoader.GetWords(ref NeutralResponsesAsset, ref neutralResponses);
 
 		// check load results
 		Debug.Log("bad responses # = " + badResponses.Count);
-        Debug.Log("good responses # = " + goodResponses.Count);
+		Debug.Log("good responses # = " + goodResponses.Count);
+		Debug.Log("neutral responses # = " + neutralResponses.Count);
     }
 
     void UpdateResponse()
@@ -62,11 +69,20 @@ public class Character : MonoBehaviour {
         }
 
         // negative feedback
-        else
+        else if (Score.Value < lastScore)
 		{
 			if (badResponses.Count > 0)
 			{
 				response = badResponses[UnityEngine.Random.Range(0, badResponses.Count)];
+			}
+        }
+
+        // neutral feedback
+        else
+        {
+			if (neutralResponses.Count > 0)
+			{
+				response = neutralResponses[UnityEngine.Random.Range(0, neutralResponses.Count)];
 			}
         }
 

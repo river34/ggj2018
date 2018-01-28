@@ -938,10 +938,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 32ed6403c0b7144e99108ddc6058e737, type: 2}
   - {fileID: 11400000, guid: 383c3a06e3d144f8eb688306b22f02aa, type: 2}
   - {fileID: 11400000, guid: bcc6590dbc6164fb68ea8e69c011cd4f, type: 2}
+  - {fileID: 11400000, guid: caed99a4f5ef340149e96b8b063b01ad, type: 2}
+  - {fileID: 11400000, guid: 6663e6c5ef4e74d73a0ffbf087ff12e5, type: 2}
   Photo: {fileID: 2042610042}
   Talk: {fileID: 11400000, guid: 45c08fcb4509540de875a6a7c166d90f, type: 2}
   GoodResponsesAsset: {fileID: 4900000, guid: eb51ae932ca464e21924b53163ffa79c, type: 3}
   BadResponsesAsset: {fileID: 4900000, guid: e26e23cf2de2845cc8bc99b668963f71, type: 3}
+  NeutralResponsesAsset: {fileID: 4900000, guid: 976148668753a4c4190e0c20476f6bc2,
+    type: 3}
 --- !u!1 &868827928
 GameObject:
   m_ObjectHideFlags: 0
