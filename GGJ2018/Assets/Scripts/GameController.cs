@@ -20,7 +20,9 @@ public class GameController : MonoBehaviour {
     public Sprite LossImage;
     public Sprite WinImage;
 
-    public AudioSource Audio;
+    public AudioSource BackgroundMusic;
+
+    public AudioSource Music;
 
 	[SerializeField]
 	TextAsset BadWordsAsset = null;
@@ -32,8 +34,8 @@ public class GameController : MonoBehaviour {
 
     List<string> goodWords = null;
 
-    const int ADD_BAD = -10;
-    const int ADD_GOOD = 10;
+    const int ADD_BAD = -20;
+    const int ADD_GOOD = 20;
     const int MAX = 100;
     const int MIN = -100;
 
@@ -149,6 +151,8 @@ public class GameController : MonoBehaviour {
     void EndGame()
     {
         Debug.Log("Game End");
+		BackgroundMusic.Stop();
+		Music.Stop();
         if (Score.Value <= MIN)
         {
             FullScreen.GetComponentInChildren<Image>().sprite = LossImage;
@@ -163,7 +167,8 @@ public class GameController : MonoBehaviour {
     public void StartGame()
     {
 		InitGame();
-        Audio.Play();
+        BackgroundMusic.Play();
+        Music.Play();
 		FullScreen.SetActive(false);
     }
 }

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d174bef3dca4b42eb9b4239c952f60d6, type: 3}
-  m_Name: Condition_Bad
+  m_Name: Condition_BetterGood
   m_EditorClassIdentifier: 
-  min: -60
-  max: -21
-  image: {fileID: 21300000, guid: 3fbed91691cbc487bb6b2be46ea4fff7, type: 3}
+  min: 20
+  max: 59
+  image: {fileID: 21300000, guid: 34d0182f5c8f34c2d80dfef86e51a35a, type: 3}

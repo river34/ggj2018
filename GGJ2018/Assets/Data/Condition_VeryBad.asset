@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Condition_VeryBad
   m_EditorClassIdentifier: 
   min: -100
-  max: -51
+  max: -61
   image: {fileID: 21300000, guid: e66a006c44242495781167debbe75c5e, type: 3}
